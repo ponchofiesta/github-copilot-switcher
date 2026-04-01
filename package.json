@@ -2,8 +2,8 @@
     "name": "github-copilot-switcher",
     "displayName": "GitHub Copilot Switcher",
     "description": "Switch GitHub Copilot between Personal and Work profiles based on available signed-in GitHub accounts.",
-    "version": "0.0.1",
-    "publisher": "Michael Richter",
+    "version": "1.0.0",
+    "publisher": "ponchofiesta",
     "license": "MIT",
     "engines": {
         "vscode": "^1.110.0",
