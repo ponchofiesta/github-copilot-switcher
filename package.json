@@ -1,0 +1,58 @@
+{
+    "name": "github-copilot-switcher",
+    "displayName": "GitHub Copilot Switcher",
+    "description": "Switch GitHub Copilot between Personal and Work profiles based on available signed-in GitHub accounts.",
+    "version": "0.0.1",
+    "publisher": "Michael Richter",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.110.0",
+        "node": ">=22.22.0"
+    },
+    "categories": [
+        "AI",
+        "Chat",
+        "Programming Languages",
+        "Machine Learning"
+    ],
+    "keywords": [
+        "github",
+        "copilot",
+        "enterprise",
+        "account"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "github-copilot-switcher.switchProfile",
+                "title": "Copilot Switcher: Switch Profile"
+            },
+            {
+                "command": "github-copilot-switcher.switchToPersonal",
+                "title": "Copilot Switcher: Switch to Personal"
+            },
+            {
+                "command": "github-copilot-switcher.switchToWork",
+                "title": "Copilot Switcher: Switch to Work"
+            }
+        ]
+    },
+    "scripts": {
+        "build": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "package": "vsce package --allow-missing-repository"
+    },
+    "dependencies": {
+        "jsonc-parser": "^3.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.19.15",
+        "@types/vscode": "^1.110.0",
+        "@vscode/vsce": "^3.7.1",
+        "typescript": "^6.0.2"
+    }
+}
